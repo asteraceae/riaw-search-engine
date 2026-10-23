@@ -75,7 +75,7 @@ documents and queries use the defaults.
 0. Setup · 1. Load the corpus (missing values) · 2. Text pre-processing (examples, step-by-step
 view) · 3. Other text fields (`product_details`, brand recovery, whole
 corpus, output-field checks, saving) · 4. Numeric and boolean fields · 5. Validation labels (query terms per field
-and label) · 6. EDA: word counts, sentence length, vocabulary (per field, top terms, bigrams), word clouds,
+and label) · 6. EDA: word counts, sentence length, vocabulary (per field, top terms, bigrams, Zipf/Heaps), word clouds,
 categories, brands and sellers, prices/discount/rating, product rankings, out of stock, named-entity recognition
 (spaCy) and structured attributes · 7. Saved files.
 
