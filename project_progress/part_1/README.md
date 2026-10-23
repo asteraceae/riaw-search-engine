@@ -5,7 +5,7 @@ Deadline: **23/10/2026, 23:59**. Tag: `IRWA-2026-part-1` (see root README).
 ## Contents
 | Path | Description |
 |---|---|
-| `../../myapp/search/preprocessing.py` | Pre-processing functions (`build_terms`, `preprocess_document`, `preprocess_corpus`, `preprocess_query`, save/load). Later parts import them so that documents and queries go through the same pipeline. |
+| `../../myapp/search/preprocessing.py` | Pre-processing functions (`build_terms`, `preprocess_corpus`, `load_processed_corpus`). Later parts import them so that documents and queries go through the same pipeline. |
 | `part_1.ipynb` | Applies the pre-processing to the corpus, saves the processed corpus, inspects `validation_labels.csv` and runs the EDA. Executed, outputs included. |
 | `figures/*.png` | Every plot of the notebook (regenerated on each run). |
 | `output/processed_documents_sample.json` | First 20 processed documents, to show the output schema without running anything. |
@@ -32,33 +32,20 @@ The NLTK stop-word list is downloaded automatically the first time `myapp.search
    jupyter nbconvert --to notebook --execute --inplace project_progress/part_1/part_1.ipynb
    ```
    or open it with `jupyter notebook project_progress/part_1/part_1.ipynb` and run all cells.
-   The notebook finds the repository root by itself (first parent folder with `web_app.py` and `myapp/`), so the
-   working directory does not matter. A full run takes about one minute.
+   Paths are relative to the notebook's own folder, which is the kernel's working directory in Jupyter, nbconvert
+   and VS Code. A full run takes about one minute.
 3. Results: figures in `figures/`, the sample files in `output/`, and the full processed corpus in
    `data/processed_corpus.jsonl`. All samples use `RANDOM_STATE = 42`, so reruns give the same numbers.
 
 ## Using the pre-processing in later parts
 ```python
-from myapp.search.preprocessing import build_terms, preprocess_query, load_processed_corpus
+from myapp.search.preprocessing import build_terms, load_processed_corpus
 
 docs = load_processed_corpus("data/processed_corpus.jsonl")  # DataFrame indexed by pid
-query_terms = preprocess_query("men slim jeans blue")         # ['men', 'slim', 'jean', 'blue']
+query_terms = build_terms("men slim jeans blue")              # ['men', 'slim', 'jean', 'blue']
 ```
-If the options below are changed for the documents, the same options must be passed to `preprocess_query`.
-
-### Options
-`build_terms(text, remove_stopwords=True, stemmer="porter", keep_numbers=False, min_length=2)`
-
-| option | default | effect |
-|---|---|---|
-| `remove_stopwords` | `True` | remove NLTK English stop words |
-| `stemmer` | `"porter"` | `"porter"`, `"snowball"` or `None` (no stemming) |
-| `keep_numbers` | `False` | keep purely numeric tokens such as `100` |
-| `min_length` | `2` | drop tokens shorter than this (before stemming) |
-
-`preprocess_corpus(raw_docs, merged_fields=None, recover_brands=True, **build_terms_options)`
-- `merged_fields`: text fields concatenated into `all_terms` (default: all seven text fields)
-- `recover_brands`: build `brand_terms` from the full brand name recovered from the URL slug (`brand_full`)
+`build_terms(text, remove_stopwords=True, stem=True)`: the two flags only exist to show intermediate steps;
+documents and queries use the defaults.
 
 ### Pipeline (`build_terms`)
 1. repair mojibake (UTF-8 text decoded as Latin-1, e.g. `youâ\x80\x99re`);
@@ -81,14 +68,14 @@ If the options below are changed for the documents, the same options must be pas
   `category_terms`, `sub_category_terms`, `product_details_terms`, `seller_terms`.
   `product_details_terms` index the attribute values, not the attribute names; `Style Code` is skipped; Yes/No
   attributes index the attribute name only when the value is Yes (`"Hooded": "Yes"` → `hooded`).
-- `all_terms`: concatenation of the term lists of `merged_fields`.
+- `all_terms`: concatenation of the seven term lists.
 - `out_of_stock`, `selling_price`, `discount`, `actual_price`, `average_rating` are not turned into terms.
 
 ## Notebook sections
-0. Setup · 1. Load the corpus (missing values, data-quality checks) · 2. Text pre-processing (examples, step-by-step
-view, effect of each step on the vocabulary) · 3. Other text fields (`product_details`, brand recovery, whole
+0. Setup · 1. Load the corpus (missing values) · 2. Text pre-processing (examples, step-by-step
+view) · 3. Other text fields (`product_details`, brand recovery, whole
 corpus, output-field checks, saving) · 4. Numeric and boolean fields · 5. Validation labels (query terms per field
-and label) · 6. EDA: word counts, sentence length, vocabulary (per field, top terms, bigrams, Zipf/Heaps), word clouds,
+and label) · 6. EDA: word counts, sentence length, vocabulary (per field, top terms, bigrams), word clouds,
 categories, brands and sellers, prices/discount/rating, product rankings, out of stock, named-entity recognition
 (spaCy) and structured attributes · 7. Saved files.
 
