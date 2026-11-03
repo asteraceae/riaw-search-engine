@@ -1,0 +1,51 @@
+query_id,pid,tfidf_score,title,sub_category
+Q1,SHTF4EHGZUJHPB7C,1.246,Women Slim Fit Solid Casual Shirt,Topwear
+Q1,SHTF4EHGZM3YK4R5,1.22,Men Slim Fit Solid Mandarin Collar Casual Shirt,Topwear
+Q1,SHTF4EHGU2ZMCY3J,1.22,Men Slim Fit Solid Mandarin Collar Casual Shirt,Topwear
+Q1,SHTF4EHGT7Y87GS4,1.22,Men Slim Fit Solid Mandarin Collar Casual Shirt,Topwear
+Q1,SHTF4EHGCKNVVYUB,1.22,Men Slim Fit Solid Mandarin Collar Casual Shirt,Topwear
+Q1,SHTF4EHG2KU74RX5,1.22,Men Slim Fit Solid Mandarin Collar Casual Shirt,Topwear
+Q1,SHTFP3TTJREVUQTG,1.218,Men Slim Fit Solid Spread Collar Casual Shirt,Topwear
+Q1,SHTF4EHGHJCGXDKS,1.218,Men Slim Fit Solid Mandarin Collar Casual Shirt,Topwear
+Q1,SHTF4EHG2PHCGQ5N,1.218,Men Slim Fit Solid Mandarin Collar Casual Shirt,Topwear
+Q1,SHTF4EHGZEZQHFMA,1.217,Women Slim Fit Solid Mandarin Collar Casual Shirt,Topwear
+Q2,TSHFPT66HZR2HYGN,0.869,Printed Women Round Neck Black T-Shirt,Topwear
+Q2,TSHFZWJMK4HG7R4X,0.804,Printed Women Round Neck Black T-Shirt,Topwear
+Q2,TSHFKGPVJTVJQU3W,0.797,Solid Women Round Neck Black T-Shirt,Topwear
+Q2,TSHFUTG2TZSYDWTP,0.796,Printed Women Round Neck Black T-Shirt,Topwear
+Q2,TSHFWF57CTFWRGFZ,0.793,Solid Women Round Neck Black T-Shirt,Topwear
+Q2,TSHFYUQYXW4BY9GR,0.789,"Striped Women Round Neck Black, White T-Shirt",Topwear
+Q2,TSHFHBQXJE8FFKVH,0.784,Self Design Women Round Neck Black T-Shirt,Topwear
+Q2,TSHFHCNYGUTFT4HA,0.778,"Color Block Women Round Neck White, Black T-Shirt",Topwear
+Q2,TSHFHBQNQZMJEUJE,0.778,Color Block Women Round Neck Black T-Shirt,Topwear
+Q2,TSHFRAMFDMSBWNQT,0.771,Printed Women Round Neck Black T-Shirt,Topwear
+Q3,KTAFD2UBPY9HHSY6,3.717,Women Embroidered Cotton Blend Straight Kurta  (Maroon),"Kurtas, Ethnic Sets and Bottoms"
+Q3,KTAFD2UBNRWRAQJW,3.717,Women Embroidered Cotton Blend Straight Kurta  (Red),"Kurtas, Ethnic Sets and Bottoms"
+Q3,KTAFD2UBHHZNSX2B,3.717,Women Embroidered Cotton Blend Straight Kurta  (Blue),"Kurtas, Ethnic Sets and Bottoms"
+Q3,KTAFD2U8ZGHHHNYF,3.638,Women Self Design Cotton Blend Straight Kurta  (Black),"Kurtas, Ethnic Sets and Bottoms"
+Q3,KTAFD2U8FHZRECCF,3.638,Women Self Design Cotton Blend Straight Kurta  (Black),"Kurtas, Ethnic Sets and Bottoms"
+Q3,ETHF2557ZHWRYHPT,3.599,Women Kurta and Pyjama Set Cotton Blend,"Kurtas, Ethnic Sets and Bottoms"
+Q3,ETHF2557EGMJTGFT,3.599,Women Kurta and Pyjama Set Cotton Blend,"Kurtas, Ethnic Sets and Bottoms"
+Q3,ETHF25572QHXAGEQ,3.599,Women Kurta and Pyjama Set Cotton Blend,"Kurtas, Ethnic Sets and Bottoms"
+Q3,ETHF2557CGF4CUMW,3.59,Women Kurta and Pyjama Set Cotton Blend,"Kurtas, Ethnic Sets and Bottoms"
+Q3,ETHF2557SGSWZEVH,3.566,Women Kurta and Pyjama Set Cotton Blend,"Kurtas, Ethnic Sets and Bottoms"
+Q4,JCKFMHS8ANSPXK72,4.08,Full Sleeve Printed Women Jacket,Winter Wear
+Q4,JCKFWC5YGQENYT6B,3.907,Full Sleeve Solid Women Denim Jacket,Winter Wear
+Q4,JCKF7KY3NQUGDHE2,3.672,Full Sleeve Solid Women Denim Casual Jacket,Winter Wear
+Q4,JCKFZ33GHPEXHFUZ,3.628,Full Sleeve Solid Women Jacket,Winter Wear
+Q4,JCKFXNVMGBYGXKHN,3.486,Full Sleeve Solid Women Denim Jacket,Winter Wear
+Q4,JCKFVDPXFVQBGME7,3.402,Full Sleeve Solid Women Denim Jacket,Winter Wear
+Q4,JCKFSHEZTYYPEMTJ,3.314,Full Sleeve Solid Women Denim Jacket,Winter Wear
+Q4,JCKFVEUDNF3J7CWV,3.186,Full Sleeve Solid Women Jacket,Winter Wear
+Q4,JCKFV7V7ZQ3PUSFF,3.18,Full Sleeve Washed Women Denim Riding Jacket,Winter Wear
+Q4,JCKFVEUDBT4KKSXR,3.156,Full Sleeve Solid Women Jacket,Winter Wear
+Q5,SHOFC585JH9RGXWG,7.255,Cricket Shoes For Women  (White),Men's Footwear
+Q5,SHOFG5TXSM7M57MY,6.399,Running Shoes For Women  (Grey),Men's Footwear
+Q5,SHOFVXGRFFD8HMBW,6.284,Party Wear For Women  (Gold),Men's Footwear
+Q5,SHOFVXGR2CZRYY7W,6.272,Party Wear For Men  (Red),Men's Footwear
+Q5,SHOFVXGRUGGSKCSU,6.259,Party Wear For Men  (Blue),Men's Footwear
+Q5,SOCFVYHYZFJ4FFNG,6.227,"Men Solid Low Cut, Peds/Footie/No-Show  (Pack of 6)",Clothing Accessories
+Q5,SHOFVXG5EYFF2H9T,5.962,Lace Up For Women  (Tan),Men's Footwear
+Q5,SHOFVXG57QNV399H,5.962,Lace Up For Women  (Brown),Men's Footwear
+Q5,SHOFWFVWRSNK5AZJ,5.962,Running Shoes For Women  (Multicolor),Men's Footwear
+Q5,SHOF98H4X8PU3EGW,5.902,Running Shoes For Women  (Blue),Men's Footwear
